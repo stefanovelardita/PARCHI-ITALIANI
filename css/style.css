@@ -1,0 +1,679 @@
+/* RESET DI BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* CORPO DELLA PAGINA */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER (top navigation) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d40;
+  padding: 0 40px;       /* Solo padding orizzontale */
+  height: 60px;          /* Altezza fissa per l'header */
+}
+
+header h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  /* Il link all'interno verrà stilizzato tramite header h3 a */
+}
+
+/* Nome sito cliccabile nell'header */
+header h3 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Per eventuali h2 nell'header, se presenti */
+header h2 {
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  font-size: 2em; /* Font più grande per il titolo, se necessario */
+}
+
+/* NAVIGAZIONE (Header) */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #00897b;
+  border-radius: 4px;
+}
+
+/* TITOLI PRINCIPALI */
+/* Qui viene impostato il colore nero per il titolo principale "ESPLORA I PARCHI D’ITALIA" */
+h1 {
+  text-align: center;
+  margin: 40px auto;
+  font-size: 2.5em;
+  max-width: 800px;
+  color: #000;
+}
+
+/* SEZIONE HERO */
+.hero {
+  background-color: #e0f7fa;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Regola di base per i paragrafi in .hero */
+.hero p {
+  color: #333;
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+/* Ingrandiamo il primo paragrafo */
+.hero p:first-of-type {
+  font-size: 2em;
+}
+
+/* Ingrandiamo il secondo paragrafo (il testo lungo) */
+.hero p:nth-of-type(2) {
+  font-size: 1.8em;
+}
+
+/* IMMAGINE PRINCIPALE */
+.homeimg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* GRID DEI PARCHI */
+.parchi-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.parchi-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.parchi-card:hover {
+  transform: translateY(-5px);
+}
+
+.parchi-img img {
+  width: 100%;
+  display: block;
+}
+
+.parchi-text {
+  padding: 15px;
+}
+
+/* Ingrandiamo leggermente i nomi dei parchi nelle card */
+.parchi-text a {
+  text-decoration: none;
+  color: #004d40;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* BOTTONI */
+.bottoneuno,
+.bottonedue {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.bottoneuno a,
+.bottonedue a {
+  background-color: #004d40;
+  color: #ffffff;
+  padding: 10px 25px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.bottoneuno a:hover,
+.bottonedue a:hover {
+  background-color: #00897b;
+}
+
+/* SEZIONE ATTIVITÀ */
+.attivita-home {
+  background-color: #e0f7fa;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.attivita-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.attivita-img-wrapper img {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  display: block;
+}
+
+.attivita-text {
+  margin-top: 40px; /* Spazio aumentato tra immagine e testo */
+  color: #333;
+  font-size: 1.4em;
+  padding: 0 15px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #004d40;
+  padding: 0 40px;       /* Solo padding orizzontale */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;          /* Altezza fissa per il footer */
+}
+
+footer .footer-sito {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Nome sito cliccabile nel footer */
+footer .footer-sito a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Footer Navigation */
+footer nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+  background-color: #00897b;
+  border-radius: 4px;
+}
+
+/* OVERRIDE: Manteniamo il testo "PARCHI IN EVIDENZA" in bianco */
+/* Assumendo che questo header si trovi nel main */
+main header h1 {
+  color: #ffffff;
+}
+
+/* MEDIA QUERIES PER LA RESPONSIVITÀ */
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+  
+  nav ul,
+  footer nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 20px;
+  }
+  
+  .hero {
+    padding: 20px;
+  }
+  
+  .parchi-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+/* RESET DI BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* CORPO DELLA PAGINA */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d40;
+  padding: 0 40px;   /* Solo padding orizzontale */
+  height: 60px;      /* Altezza fissa per l'header */
+}
+
+header h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+header h3 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #00897b;
+  border-radius: 4px;
+}
+
+/* SEZIONE HERO - PARCHI */
+.heroparchi {
+  background-color: #e0f7fa;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.heroparchi h2 {
+  font-size: 2.3em;  /* Titolo più grande */
+  color: #004d40;
+  margin-bottom: 20px;
+  /* Rimuovi "font-size: bold;" perché non è una proprietà valida */
+}
+
+.heroparchi p {
+  font-size: 1.3em;  /* Testo ingrandito simile alla home */
+  color: #333;
+  margin: 15px auto;
+  max-width: 800px;
+}
+
+/* SEZIONE TESTO */
+.testoparchi {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.testoparchi p {
+  font-size: 1.5em;  /* Testo più evidente */
+  color: #333;
+  margin: 12px auto;
+  max-width: 800px;
+}
+
+/* GRIGLIA DEI PARCHI */
+.parchi-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.parchi-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.parchi-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Rendi l'intera card cliccabile */
+.parchi-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMMAGINE */
+.parchi-img img {
+  width: 100%;
+  display: block;
+}
+
+/* Testo della card */
+.parchi-text {
+  padding: 15px;
+  /* Mantiene lo spacing interno */
+}
+
+.parchi-text p {
+  margin: 0;
+  /* I valori seguono quelli della versione precedente */
+  font-size: 1.3em;  /* Leggermente ingrandito rispetto alla versione base */
+  font-weight: bold;
+  color: #004d40;
+}
+
+/* FOOTER */
+footer {
+  background-color: #004d40;
+  padding: 0 40px;   /* Solo padding orizzontale */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;      /* Altezza fissa per il footer */
+}
+
+footer .footer-sito {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+footer .footer-sito a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+  background-color: #00897b;
+  border-radius: 4px;
+}
+
+/* MEDIA QUERIES PER LA RESPONSIVITÀ */
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+  
+  nav ul,
+  footer nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .heroparchi, .testoparchi {
+    padding: 20px;
+  }
+  
+  .parchi-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+/* RESET DI BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* CORPO DELLA PAGINA */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  /* Rimosso il padding-bottom per eliminare lo spazio bianco sotto il footer */
+  padding-bottom: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #004d40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+}
+header h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+header h3 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+  background-color: #00897b;
+  border-radius: 4px;
+}
+
+/* HERO BANNER */
+.hero-banner {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.hero-banner.fullwidth {
+  /* Rende il banner a larghezza intera */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.5); /* Ulteriore oscuramento */
+}
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-overlay h2 {
+  font-size: 2.8em; /* Testo ingrandito */
+  margin: 0;
+}
+.hero-overlay h3 {
+  font-size: 1.8em; /* Testo ingrandito */
+  margin-top: 0.5em;
+}
+
+/* CONTENUTO SPECIFICO DEL DETTAGLIO */
+.detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* MAIN CONTENT: ora impostato su un'unica colonna più larga */
+.parco-detail {
+  padding: 0 20px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+.parco-detail h2,
+.parco-detail h3 {
+  /* Assicurarsi che i titoli vengano spostati sull'intera larghezza */
+  -webkit-column-span: all;
+  column-span: all;
+}
+.testopaginadettaglio {
+  font-size: 1.2em;
+  margin: 15px auto;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #004d40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 60px;
+  margin-top: 40px;
+  /* Eliminato eventuale margine inferiore */
+  margin-bottom: 0;
+}
+.footer-sito {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ffffff;
+}
+.footer-sito a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+footer nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+footer nav ul li a:hover {
+  background-color: #00897b;
+  border-radius: 4px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+  nav ul, footer nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-overlay h2 {
+    font-size: 2em;
+  }
+  .hero-overlay h3 {
+    font-size: 1.2em;
+  }
+  .testopaginadettaglio {
+    font-size: 1em;
+    margin: 10px;
+  }
+  /* Per dispositivi piccoli, si mantiene una sola colonna */
+  .parco-detail {
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
+}
